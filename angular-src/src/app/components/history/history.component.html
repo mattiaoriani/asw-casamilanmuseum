@@ -1,0 +1,30 @@
+<div class="content">
+  <h2 class="page-header">La nostra storia</h2>
+  <ul class="timeline" *ngFor="let singleStory of history;odd as isOdd">
+    <li *ngIf="!isOdd" >
+      <div class="tldate"><p class="year"><strong>{{singleStory.year.initial}}-{{singleStory.year.final}}</strong></p></div>
+      <div class="timeline-panel" (click)="getFilter(singleStory)">
+        <div class="tl-heading">
+          <h4>{{singleStory.name}}</h4>
+        </div>
+        <div class="tl-body">
+          <p>{{singleStory.description.small}}</p>
+          <img src={{singleStory.photoPath.normal}} alt="story-cover">
+        </div>
+      </div>
+    </li>
+
+    <li class="timeline-inverted" *ngIf="isOdd">
+      <div class="tldate-odd"><p class="year"><strong>{{singleStory.year.initial}}-{{singleStory.year.final}}</strong></p></div>
+      <div class="timeline-panel" (click)="getFilter(singleStory)">
+        <div class="tl-heading">
+          <h4>{{singleStory.name}}</h4>
+        </div>
+        <div class="tl-body">
+          <p>{{singleStory.description.small}}</p>
+          <img src={{singleStory.photoPath.normal}} alt="story-cover">
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

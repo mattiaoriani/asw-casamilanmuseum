@@ -1,0 +1,21 @@
+.audio-control{
+  display: -webkit-flex !important;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  
+}
+.audio-info{
+  margin-top: 1%;
+  color: black;
+}
+.btn-audio{
+  background-color: inherit;
+  background-image: url('../../../assets/play.png');
+  width: 40px;
+  height: 40px;
+  background-position: center;
+  background-size: contain;
+}

@@ -1,0 +1,44 @@
+.content{
+  font-family: milanregular;
+  @include mq('desktop-wide') {
+    padding: 1% 20% !important;
+  }
+  @include mq('tablet') {
+    padding: 1% 10%;
+  }
+}
+.page-header{
+  margin: auto;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  padding-left: 5%;
+  padding-right: 2%;
+  font-family: milanfont;
+  @include mq('tablet') {
+    padding-left: 0px;
+  }
+  @include mq('tablet' , 'max') {
+    background-color: #300803;
+    color: white;
+    border-bottom: 0px;
+  }
+}
+
+.btn-back{
+  display: flex;
+  clear: none;
+  float:right;
+  padding-bottom: 8px;
+  background-color: #cccccc;
+  color: black;
+}
+
+.description{
+  padding-top: 1% !important;
+  padding: 5%;
+  margin-bottom: 0px;
+  text-align: justify;
+  @include mq('tablet' , 'max') {
+    color: black;
+  }
+}

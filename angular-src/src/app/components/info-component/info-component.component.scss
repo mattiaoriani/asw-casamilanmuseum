@@ -1,0 +1,56 @@
+@import 'src/assets/stylesheets/_mixins.scss';
+
+.content{
+  padding-top: 1%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 10%;
+  font-family: milanregular;
+  @include mq('desktop-wide') {
+    padding: 1% 20% !important;
+  }
+  @include mq('tablet') {
+    padding: 1% 10%;
+  }
+}
+.page-header{
+  margin-top: 18px;
+  font-family: milanfont;
+  text-align: center;
+}
+p{
+  text-align: center;
+  font-size: 15px;
+}
+.strong{
+  font-weight: bold;
+  font-family: milanfont;
+  margin: auto;
+}
+.strong,
+.normal{
+  display:block;
+}
+.info{
+  padding-top: 2px;
+}
+.input{
+  @include mq('desktop-wide') {
+    padding: 1% 20% !important;
+  }
+  @include mq('tablet') {
+    padding: 1% 10%;
+  }
+}
+/*@media only screen and (min-width: 1400px) {
+  .content,
+  .input{
+    padding: 1% 20% !important;
+  }
+}
+@media only screen and (min-width: 800px){
+  .content,
+  .input{
+    padding: 1% 10%;
+  }
+}*/

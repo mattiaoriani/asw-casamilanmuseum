@@ -1,0 +1,14 @@
+<div class="content">
+  <h2 class="page-header">Hall Of Fame</h2>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let footballer of footballers">
+      <button
+        class="btn-dashboard"
+        [routerLink]="['/singlefootballer', getFilter(footballer)]"
+        [ngStyle]="{'background-image': 'url(' + footballer.coverImg + ')'}">
+        {{footballer.name}} {{footballer.surname}}
+        <div class="layer"></div>
+      </button>
+    </div>
+  </div>
+</div>

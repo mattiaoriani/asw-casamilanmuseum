@@ -1,0 +1,367 @@
+@import 'src/assets/stylesheets/_mixins.scss';
+@import 'src/assets/stylesheets/_audio.scss';
+
+.content{
+  font-family: milanregular;
+  @include mq('desktop-wide') {
+    padding: 1% 20% !important;
+  }
+  @include mq('tablet') {
+    padding: 1% 10%;
+  }
+}
+.page-header{
+  margin-top: 18px;
+}
+.logo{
+  width: 75px;
+  height: 75px;
+}
+.page-header,th,.numerovittorie{
+  font-family: milanfont;
+}
+.btn-back{
+  display: flex;
+  clear: none;
+  float:right;
+  padding-bottom: 8px;
+  background-color: #cccccc;
+  color: black;
+  font-size: 13px;
+}
+.numerovittorie{
+  font-size: 20px;
+}
+li,a,td{
+  font-family: milanregular;
+  font-size: 16px;
+}
+table {
+  border-radius: 5px;
+  border-collapse: collapse;
+  width: 100%;
+}
+td, th {
+  border: 1px solid #dddddd;
+  border-left: none;
+  border-right: none;
+  text-align: center;
+  padding: 8px;
+}
+tr:nth-child(even) {
+  background-color: #fde9e7;
+}
+.top-table{
+  border-top: none;
+}
+.fb-image,
+.fb-image-small{
+  border: 2px solid #dddddd;
+  border-radius: 5px;
+
+}
+ul{
+  padding-left: 0px;
+  padding-top: 5px;
+}
+.list-group-item{
+  background: none;
+  border: none;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.col-md-4{
+  width:auto;
+}
+.fb-info{
+  width: auto;
+  text-transform: uppercase;
+  @include mq('tablet' , 'max') {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  @include mq('tablet') {
+    width:350px !important;
+  }
+}
+
+.description{
+  text-align: justify;
+}
+.fb-image-small{
+  width: 100%;
+  height: auto;
+  @include mq('phablet','max') {
+    width: 100%;
+    border: 0px;
+    border-radius: 0px;
+  }
+}
+.fb-image{
+  display: none;
+}
+.swiper-slide{
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 5% !important;
+}
+.content-stats{
+  padding-left: 0px;
+}
+.stats{
+  display: inline;
+}
+
+.img-stats{
+  width: 40px;
+  height: 40px;
+}
+.content-trofeo{
+  margin-top: 2%;
+  margin-bottom: 2%;
+  padding-left: 0px;
+  padding-right: 0px;
+  display: inline-block;
+  width: 30%;
+}
+
+.trophyPic{
+  margin: auto;
+  width: 70px;
+  height: 70px;
+}
+.trofeo{
+  text-align: center;
+  display: block;
+  width: auto;
+  @include mq('tablet') {
+    display: inline;
+  }
+}
+
+.swiper{
+  height: 100%;
+  width: 100%;
+}
+/*.audio-control{
+  display: -webkit-flex !important;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center
+}
+.audio-info{
+  margin-top: 1%;
+  color: black;
+}
+.btn-audio{
+  background-color: inherit;
+  background-image: url('../../../assets/play.png');
+  background-position: center;
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+}*/
+
+.header-title{
+  @include mq('phablet','max') {
+    background-color: #300803;
+    color: white;
+    border-bottom: 0px;
+  }
+  @include mq('tablet' , 'max') {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 5%;
+    padding-right: 2%;
+  }
+}
+
+.palmares{
+  @include mq('tablet') {
+    display: block;
+    clear:both;
+  }
+  @include mq('tablet' , 'max') {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+.biography,
+.carriera{
+  @include mq('tablet' , 'max') {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+.rowbiographycarriera{
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.fbcontentimage{
+  @include mq('tablet' , 'max') {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+.row{
+  @include mq('tablet') {
+    clear:left;
+  }
+}
+.info {
+  @include mq('tablet') {
+    padding-left: 1%;
+  }
+}
+.biography,
+.carriera{
+  @include mq('tablet') {
+    width: 50% !important;
+    float: left;
+   }
+}
+.col-md-4{
+  @include mq('tablet') {
+    width:auto;
+  }
+}
+.fb-image{
+  @include mq('tablet') {
+    display: block;
+    max-height: 400px;
+  }
+}
+.fb-image-small{
+  @include mq('tablet') {
+    display: none;
+  }
+}
+.trophyPic{
+  @include mq('tablet') {
+    width: 70px;
+    height: 70px;
+  }
+}
+.content-trofeo-trofeo{
+  @include mq('tablet') {
+    padding: 2%;
+    display: inline;
+    width: 33,33333% !important;
+  }
+}
+.img-stats{
+  @include mq('tablet') {
+    width: 50px;
+    height: 50px;
+  }
+}
+.list-group-item:hover{
+  @include mq('tablet') {
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+  }
+}
+
+/*@media only screen and (min-width: 1400px) {
+  .content{
+    padding: 1% 20% !important;
+  }
+}*/
+/*@media only screen and (max-width: 500px) {
+  .fb-image-small{
+    width: 100%;
+    border: 0px;
+    border-radius: 0px;
+  }
+  .header-title{
+    background-color: #300803;
+    color: white;
+    border-bottom: 0px;
+  }
+
+}*/
+
+/*@media only screen and (max-width: 799px) {
+  .fbcontentimage{
+    padding-left: 0px;
+    padding-right: 0px;
+  }*/
+  /*.header-title{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 5%;
+    padding-right: 2%;
+  }*/
+  /*.fb-info,
+  .palmares{
+    padding-left: 5%;
+    padding-right: 5%;
+  }*/
+  /*.biography,
+  .carriera{
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}*/
+//@media only screen and (min-width: 800px) {
+  /*.content{
+    padding: 1% 10%;
+  }*/
+  /*.row{
+    clear:left;
+  }
+  .info {
+    padding-left: 1%;
+  }
+  /*.palmares{
+    display: block;
+    clear:both;
+  }*/
+  /*.biography,
+  .carriera{
+    width: 50% !important;
+    float: left;
+  }
+  .col-md-4{
+    width:auto;
+  }
+  /*.fb-info{
+    width:350px;
+  }*/
+  /*.fb-image{
+    display: block;
+    max-height: 400px;
+  }
+  .fb-image-small{
+    display: none;
+  }
+  /*.trofeo{
+    display: inline;
+  }*/
+  /*.trophyPic{
+    width: 70px;
+    height: 70px;
+  }
+  .content-trofeo-trofeo{
+    padding: 2%;
+    display: inline;
+    width: 33,33333% !important;
+  }
+  .img-stats{
+    width: 50px;
+    height: 50px;
+  }
+  .list-group-item:hover{
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+  }
+}*/

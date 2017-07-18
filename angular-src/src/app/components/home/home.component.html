@@ -1,0 +1,37 @@
+<div class="homepage">
+  <div class="jumbotron text-center">
+    <div class="jumbotron-content">
+      <img class="logo" src="../../assets/logo.png" alt="logo">
+      <h1 class="title">CASA MILAN Museum</h1>
+      <p class="lead">Welcome to Casa</p>
+        <a *ngIf="!authService.loggedIn()" class="btn btn-primary" [routerLink]="['/login']">Inizia il tour</a>
+        <a *ngIf="authService.loggedIn()" class="btn btn-primary" [routerLink]="['/dashboard']">Categorie</a>
+        <a *ngIf="authService.loggedIn()" class="btn btn-default" [routerLink]="['/info']">Info</a>
+
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="info">
+          <img class="img-feature" src="../../assets/home/history.png" alt="history-icon">
+          <h3 class="features">Storia</h3>
+          <p class="subfeatures">Puoi conoscere la nostra storia.</p>
+        </div>
+        </div>
+        <div class="col-md-4">
+          <img class="img-feature" src="../../assets/home/trophy.png" alt="trophies-icon">
+          <h3 class="features">Trofei</h3>
+          <p class="subfeatures">Esplora i nostri trofei.</p>
+        </div>
+        <div class="col-md-4">
+          <img class="img-feature" src="../../assets/home/halloffame.png" alt="hall-of-fame-icon">
+          <h3 class="features">Hall Of Fame</h3>
+          <p class="subfeatures">Scopri i nostri migliori giocatori.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

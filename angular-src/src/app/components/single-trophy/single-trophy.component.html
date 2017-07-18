@@ -1,0 +1,65 @@
+<div class="content">
+  <h2 class="page-header">{{trophy.name}}
+    <a class="btn btn-back" [routerLink]="['/trophies']" (click)="back()">Indietro</a>
+  </h2>
+    <ul class="nav nav-tabs" >
+      <ng-container *ngFor="let winner of trophy.trophiesWon;first as firstElement">
+        <li *ngIf="firstElement" class="active">
+          <a href="#{{winner.year}}" data-toggle="tab" aria-expanded="true" (click)="back()">{{winner.year}}</a>
+        </li>
+        <li *ngIf="!firstElement" class="">
+          <a href="#{{winner.year}}" data-toggle="tab" aria-expanded="false" (click)="back()">{{winner.year}}</a>
+        </li>
+      </ng-container>
+    </ul>
+    <div id="myTabContent" class="tab-content">
+      <ng-container *ngFor="let winner of trophy.trophiesWon; first as isFirst">
+        <div *ngIf="isFirst" class="tab-pane fade active in" id="{{winner.year}}">
+          <div class="up">
+          <swiper [config]="config">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" *ngFor="let img of winner.photoList">
+                <figure>
+                  <img class="story-img" [src]="img.path" alt="winner-img">
+                </figure>
+              </div>
+            </div>
+            <!-- Add Scrollbar -->
+              <div class="swiper-scrollbar"></div>
+              <!-- Add Arrows -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+          </swiper>
+        </div>
+        <div class="audio-control">
+          <p id="infoaudio" class="audio audio-info">Clicca per ascoltare la descrizione</p>
+          <button id="btnaudio" class="audio btn btn-audio" type="button" (click)="speak(winner.description)"></button>
+        </div>
+          <p class="description">{{winner.description}}</p>
+        </div>
+        <div *ngIf="!isFirst" class="tab-pane fade" id="{{winner.year}}">
+          <div class="up">
+          <swiper [config]="config">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" *ngFor="let img of winner.photoList">
+                <figure>
+                  <img class="story-img" [src]="img.path" alt="winner-img">
+                </figure>
+              </div>
+            </div>
+            <!-- Add Scrollbar -->
+              <div class="swiper-scrollbar"></div>
+              <!-- Add Arrows -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+          </swiper>
+        </div>
+        <div class="audio-control">
+          <p id="infoaudio2" class="audio audio-info">Clicca per ascoltare la descrizione</p>
+          <button id="btnaudio2" class="audio btn btn-audio" type="button" (click)="speak(winner.description)"></button>
+        </div>
+          <p class="description">{{winner.description}}</p>
+        </div>
+      </ng-container>
+    </div>
+</div>

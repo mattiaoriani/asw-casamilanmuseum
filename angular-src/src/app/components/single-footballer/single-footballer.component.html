@@ -1,0 +1,73 @@
+<div class="content">
+    <h1 class="page-header header-title">{{footballer.name}} {{footballer.surname}}
+      <a class="btn btn-back" [routerLink]="['/hall-of-fame']" (click)="back()">Indietro</a>
+    </h1>
+    <div class="container">
+    <div class="row">
+      <div class="col-md-4 fbcontentimage">
+          <img class="fb-image" src={{footballer.photoPath.normal}} alt="footballer photo">
+          <img class="fb-image-small" src={{footballer.photoPath.normal}} alt="footballer photo">
+      </div>
+
+      <div class="col-md-4 fb-info">
+        <ul class="info">
+          <div class="list-group-item">
+            <img class="stats img-stats" src="../../assets/hall-of-fame/datanascita.png" alt="icon-appearences">
+            <li class="stats">Data di nascita: <strong>{{footballer.dateBorn.day}}.{{footballer.dateBorn.month}}.{{footballer.dateBorn.year}}</strong></li>
+          </div>
+          <div class="list-group-item">
+            <img class="stats img-stats" src="../../assets/hall-of-fame/numeromaglia.png" alt="icon-appearences">
+            <li class="stats">Numero di maglia: <strong>{{footballer.numberShirt}}</strong></li>
+          </div>
+          <div class="list-group-item">
+            <img class="stats img-stats" src="../../assets/hall-of-fame/presenze.png" alt="icon-appearences">
+            <li class="stats">Presenze totali: <strong>{{getSumAppearences(footballer)}}</strong></li>
+          </div>
+          <div class="list-group-item">
+            <img class="stats img-stats" src="../../assets/hall-of-fame/goal.png" alt="icon-appearences">
+            <li class="stats">Goal totali: <strong>{{getSumGoals(footballer)}}</strong></li>
+          </div>
+          <div class="list-group-item">
+            <img class="stats img-stats" src="../../assets/hall-of-fame/nazionalita.png" alt="icon-appearences">
+            <li class="stats">Nazionalità: <strong>{{footballer.nationality}}</strong></li>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+      <div class="palmares">
+        <h2 class="page-header">Palmares con il Milan</h2>
+          <div class="col-md-4 content-trofeo" *ngFor="let trophy of footballer.trophiesWon">
+            <img class="trofeo trophyPic" src={{getThrophyPath(trophy)}} alt="trophy-icon" >
+            <li class="list-group-item trofeo numerovittorie"><strong>{{trophy.numberofWin}}</strong></li>
+            <li class="list-group-item trofeo">{{trophy.name}}</li>
+          </div>
+      </div>
+      <div class="row rowbiographycarriera">
+        <div class="col-md-4 biography">
+            <h2 class="page-header">Biografia</h2>
+            <div class="audio-control">
+              <p id="infoaudio" class="audio-info">Clicca per ascoltare la biografia</p>
+              <button id="btnaudio" class="btn btn-audio" type="button" (click)="speak(footballer.description)"></button>
+            </div>
+            <a class="list-group-item description">{{footballer.description}}</a>
+        </div>
+        <div class="col-md-4 carriera">
+          <h2 class="page-header">Carriera nel Milan</h2>
+            <table>
+              <tr>
+                <th  class="top-table" id="Stagione">Stagione</th>
+                <th  class="top-table" id="Presenze">Presenze</th>
+                <th class="top-table" id="Goal">Goal</th>
+                <th class="top-table" id="Assist">Assist</th>
+              </tr>
+              <tr *ngFor="let stat of footballer.statics">
+                <td headers="Stagione">{{stat.year}}</td>
+                <td headers="Presenze">{{stat.apperances}}</td>
+                <td headers="Goal">{{stat.goals}}</td>
+                <td headers="Assist">{{stat.assists}}</td>
+              </tr>
+            </table>
+        </div>
+      </div>
+</div>

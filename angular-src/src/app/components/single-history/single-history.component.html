@@ -1,0 +1,32 @@
+<div class="content">
+  <h2 class="page-header">{{history.name}}
+    <!--<a class="btn btn-back" [routerLink]="['/history']">Indietro</a>-->
+    <a class="btn btn-back" [routerLink]="['/history']" (click)="back()">Indietro</a>
+  </h2>
+
+  <div class="history-item">
+    <div class="up">
+      <swiper class="swiper" [config]="config">
+          <div class="swiper-wrapper">
+              <div class="swiper-slide" *ngFor="let photo of history.additionalPhotoPath">
+                <div [ngStyle]="{'background-image': 'url(' + photo.Path + ')'}">
+                  <img class="story-img" [src]="photo.path" alt="story-img">
+                </div>
+              </div>
+          </div>
+          <!-- Add Scrollbar -->
+            <div class="swiper-scrollbar"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+      </swiper>
+    </div>
+    <div>
+      <div class="audio-control">
+        <p id="infoaudio" class="audio-info">Clicca per ascoltare la descrizione</p>
+        <button id="btnaudio" class="btn btn-audio" type="button" (click)="speak(history.description.long)"></button>
+      </div>
+      <p class="description">{{history.description.long}}</p>
+    </div>
+  </div>
+</div>
